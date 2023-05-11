@@ -11,15 +11,13 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
-      - name: install snapcraft
-        run: |
-          sudo snap install snapcraft --classic
       - name: build
-        run: |
-          snapcraft --destructive-mode
+        uses: snapcore/action-build@v1
         id: build
       - name: publish snap
+        uses: snapcore/action-publish@v1
         env:
           SNAPCRAFT_STORE_CREDENTIALS: ${{ secrets.SNAPCRAFT_STORE_CREDENTIALS }}
-        run:
-          snapcraft upload --release=edge ./dive_0.10.0_amd64.snap
+        with:
+          snap: ${{ steps.build.outputs.snap }}
+          release: edge
