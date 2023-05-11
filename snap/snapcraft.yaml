@@ -10,14 +10,14 @@ description: |
   
   Install the Docker and Dive snaps and connect them:
   
-    sudo snap install docker
-    sudo snap install dive
-    sudo snap connect dive:docker-executables docker:docker-executables
-    sudo snap connect dive:docker-daemon docker:docker-daemon
+  `sudo snap install docker`
+  `sudo snap install dive`
+  `sudo snap connect dive:docker-executables docker:docker-executables`
+  `sudo snap connect dive:docker-daemon docker:docker-daemon`
   
   Run `dive`:
   
-    dive ubuntu:latest
+  `dive ubuntu:latest`
 
 source-code: https://github.com/wagoodman/dive
 grade: stable
