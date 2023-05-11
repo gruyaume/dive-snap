@@ -2,7 +2,7 @@ name: dive
 base: core22
 version: '0.10.0'
 summary: A tool for exploring each layer in a docker image
-license: (Apache-2.0 AND MIT)
+license: MIT
 description: |
   Dive is a tool for exploring a docker image, layer contents, and discovering ways to shrink the size of your Docker/OCI image. To learn more about dive, see https://github.com/wagoodman/dive.
   
