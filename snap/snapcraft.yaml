@@ -1,0 +1,35 @@
+name: dive
+base: core22
+version: '0.10.0'
+summary: A tool for exploring each layer in a docker image
+description: Dive is a tool for exploring a docker image, layer contents, and discovering ways to shrink the  size of your Docker/OCI image.
+source-code: https://github.com/wagoodman/dive
+grade: stable
+confinement: strict
+
+plugs:
+  docker-daemon:
+    interface: docker
+  docker-executables:
+    interface: content
+    default-provider: docker
+    target: $SNAP/docker-snap
+
+environment:
+  PATH: $PATH:$SNAP/docker-snap/bin/
+
+apps:
+  dive:
+    command: bin/dive
+    plugs:
+      - docker-daemon
+      - docker-executables
+
+parts:
+  dive:
+    plugin: go
+    build-snaps:
+      - go
+    source: https://github.com/wagoodman/dive.git
+    source-type: git
+    source-tag: v0.10.0
