@@ -2,7 +2,22 @@ name: dive
 base: core22
 version: '0.10.0'
 summary: A tool for exploring each layer in a docker image
-description: Dive is a tool for exploring a docker image, layer contents, and discovering ways to shrink the  size of your Docker/OCI image.
+description: |
+  Dive is a tool for exploring a docker image, layer contents, and discovering ways to shrink the size of your Docker/OCI image. To learn more about dive, see https://github.com/wagoodman/dive.
+  
+  **Usage**
+  
+  Install the Docker and Dive snaps and connect them:
+  
+    sudo snap install docker
+    sudo snap install dive
+    sudo snap connect dive:docker-executables docker:docker-executables
+    sudo snap connect dive:docker-daemon docker:docker-daemon
+  
+  Run `dive`:
+  
+    dive ubuntu:latest
+
 source-code: https://github.com/wagoodman/dive
 grade: stable
 confinement: strict
