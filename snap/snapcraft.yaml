@@ -1,6 +1,6 @@
 name: dive
 base: core22
-version: '0.10.0'
+version: '0.11.0'
 summary: A tool for exploring each layer in a docker image
 license: MIT
 description: |
@@ -48,4 +48,4 @@ parts:
       - go
     source: https://github.com/wagoodman/dive.git
     source-type: git
-    source-tag: v0.10.0
+    source-tag: v0.11.0
