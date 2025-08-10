@@ -1,6 +1,10 @@
 # Dive snap
 [![dive](https://snapcraft.io/dive/badge.svg)](https://snapcraft.io/dive)
 
+> **:warning: Deprecation Notice!**
+>
+> This snap is deprecated and will not receive further updates. Please refer to the upstream [Dive](https://github.com/wagoodman/dive) project to continue using Dive.
+
 A snap to run [Dive](https://github.com/wagoodman/dive), a tool for exploring a docker image.
 
 ## Usage
